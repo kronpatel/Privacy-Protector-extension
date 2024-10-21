@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Protector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Privacy Protector</h1>
+
+        <!-- Clear Browsing Data Options -->
+        <div class="option-group">
+            <label>Clear Browsing Data:</label>
+            <div class="checkboxes">
+                <label><input type="checkbox" id="clearCookies"> Cookies</label>
+                <label><input type="checkbox" id="clearCache"> Cache</label>
+                <label><input type="checkbox" id="clearHistory"> History</label>
+            </div>
+        </div>
+        <button id="clearDataButton" class="button">Clear Data</button>
+
+        <!-- Block Specific Sites -->
+        <div class="option">
+            <label for="blockSiteInput" class="blockLabel">Block Specific Site:</label>
+            <input type="text" id="blockSiteInput" class="blockInput" placeholder="example.com">
+            <button id="blockSiteButton" class="button small">Block</button>
+        </div>
+
+        <p id="status" class="status"></p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

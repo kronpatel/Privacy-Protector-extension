@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Privacy Protector",
+    "version": "1.0",
+    "description": "Protects your privacy by blocking trackers and third-party cookies.",
+    "permissions": ["browsingData", "declarativeNetRequest", "declarativeNetRequestWithHostAccess", "tabs", "storage"],
+    "host_permissions": ["*://*/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    }
+  }
+  
