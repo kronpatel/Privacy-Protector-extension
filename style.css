@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background: linear-gradient(to right, #e0e0e0, #f4f4f9);
     padding: 20px;
     width: 300px;
     text-align: center;
@@ -15,15 +15,22 @@ body {
 
 .container {
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-    font-size: 1.4em;
+    font-size: 1.6em; /* Slightly larger size */
     color: #333;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 1em;
+    color: #666;
     margin-bottom: 20px;
+    font-weight: 400; /* Normal weight */
 }
 
 .buttons {
@@ -38,23 +45,133 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', sans-serif; /* Ensure button uses Poppins */
 }
 
 .button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Style input fields */
+.blockInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    font-family: 'Poppins', sans-serif; /* Ensure input uses Poppins */
+}
+
+.blockInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.blockInput:hover, .button:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background: linear-gradient(to right, #e0e0e0, #f4f4f9);
+    padding: 20px;
+    width: 320px; /* Adjusted width */
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    background: linear-gradient(180deg, #ffffff, #f9f9f9); /* Gradient background */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    border: 1px solid #e0e0e0; /* Soft border */
+}
+
+.title {
+    font-size: 1.8em; /* Larger title size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 1.1em; /* Slightly larger */
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 400; /* Normal weight */
+}
+
+.option-group, .option {
+    margin-bottom: 20px; /* More space between options */
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+    font-family: 'Poppins', sans-serif; /* Ensure button uses Poppins */
+    width: 100%; /* Full width */
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blockInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    font-family: 'Poppins', sans-serif; /* Ensure input uses Poppins */
+}
+
+.blockInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Hover effects */
+.blockInput:hover, .button:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Add spacing to checkboxes */
+.checkboxes label {
+    margin-right: 10px; /* Space between checkbox labels */
+}
+.blockInput:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 .status {
     margin-top: 20px;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #555;
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 .status.success {
-    color: #4CAF50;
+    color: #4CAF50; /* Green for success */
 }
 
 .status.error {
-    color: #f44336;
+    color: #f44336; /* Red for error */
 }
